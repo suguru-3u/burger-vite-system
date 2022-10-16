@@ -5,15 +5,23 @@ const routes = [
     path: "/",
     name: "top",
     component: async () => {
-      const top = await import("@/pages/TopPage.vue");
+      const top = await import("@/pages/Top.vue");
       return top;
+    },
+  },
+  {
+    path: "/pedidos",
+    name: "pedidos",
+    component: async () => {
+      const pedidos = await import("@/pages/Pedidos.vue");
+      return pedidos;
     },
   },
   {
     path: "/login",
     name: "login",
     component: async () => {
-      const login = await import("@/pages/LoginPage.vue");
+      const login = await import("@/pages/Login.vue");
       return login;
     },
   },
