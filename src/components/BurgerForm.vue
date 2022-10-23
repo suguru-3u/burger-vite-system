@@ -17,8 +17,8 @@
           <label for="pao">Escolha o pão:</label>
           <select id="pao" v-model="pao" name="pao">
             <option value="">Selecione o seu pão</option>
-            <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">
-              {{ pao.tipo }}
+            <option v-for="pae in paes" :key="pae.id" :value="pae.tipo">
+              {{ pae.tipo }}
             </option>
           </select>
         </div>
@@ -36,9 +36,9 @@
             Selecione os opcionais:</label
           >
           <div
-            class="checkbox-container"
             v-for="opcional in opcionaisdata"
             :key="opcional.id"
+            class="checkbox-container"
           >
             <input
               v-model="opcionais"
@@ -59,22 +59,40 @@
 
 <script lang="ts">
 import Message from "./Message.vue";
+
+type data = {
+  id: number;
+  tipo: string;
+};
+
+type ingredientes = {
+  paes?: data;
+  carnes?: data;
+  opcionaisdata?: data;
+  nome: string;
+  pao: string;
+  carne: string;
+  opcionais: string[];
+  status: string;
+  msg: string;
+};
+
 export default {
   name: "BurgerForm",
   components: {
     Message,
   },
-  data() {
+  data(): ingredientes {
     return {
-      paes: null,
-      carnes: null,
-      opcionaisdata: null,
-      nome: null,
-      pao: null,
-      carne: null,
+      paes: undefined,
+      carnes: undefined,
+      opcionaisdata: undefined,
+      nome: "",
+      pao: "",
+      carne: "",
       opcionais: [],
-      status: "Solicitado",
-      msg: null,
+      status: "",
+      msg: "",
     };
   },
   mounted() {
@@ -85,6 +103,7 @@ export default {
       const req = await fetch("http://localhost:3000/ingredientes");
       console.log(req);
       const data = await req.json();
+      console.log("取得Data", data);
 
       this.paes = data.paes;
       this.carnes = data.carnes;
