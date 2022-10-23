@@ -26,15 +26,15 @@
           <label for="carne">Escolha a carne do seu Burger:</label>
           <select id="carne" v-model="carne" name="carne">
             <option value="">Selecione a carne</option>
-            <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">
-              {{ carne.tipo }}
+            <option v-for="carn in carnes" :key="carn.id" :value="carn.tipo">
+              {{ carn.tipo }}
             </option>
           </select>
         </div>
         <div id="opcionais-container" class="input-container">
           <label id="opcionais-title" for="opcionais">
-            Selecione os opcionais:</label
-          >
+            Selecione os opcionais:
+          </label>
           <div
             v-for="opcional in opcionaisdata"
             :key="opcional.id"
@@ -61,14 +61,14 @@
 import Message from "./Message.vue";
 
 type data = {
-  id: number;
+  id: string;
   tipo: string;
 };
 
 type ingredientes = {
-  paes?: data;
-  carnes?: data;
-  opcionaisdata?: data;
+  paes?: data[];
+  carnes?: data[];
+  opcionaisdata?: data[];
   nome: string;
   pao: string;
   carne: string;
