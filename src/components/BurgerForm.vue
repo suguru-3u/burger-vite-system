@@ -4,28 +4,28 @@
     <div>
       <form id="burger-form" @submit="createBurger">
         <div class="input-container">
-          <label for="nome">Nome do cliente:</label>
+          <label for="nome">お客様名: </label>
           <input
             id="nome"
             v-model="nome"
             type="text"
             name="nome"
-            placeholder="Digite o seu nome"
+            placeholder="お客様のお名前を入力してください"
           />
         </div>
         <div class="input-container">
-          <label for="pao">Escolha o pão:</label>
+          <label for="pao">パンの種類:</label>
           <select id="pao" v-model="pao" name="pao">
-            <option value="">Selecione o seu pão</option>
+            <option value="">パンをお選びください</option>
             <option v-for="pae in paes" :key="pae.id" :value="pae.tipo">
               {{ pae.tipo }}
             </option>
           </select>
         </div>
         <div class="input-container">
-          <label for="carne">Escolha a carne do seu Burger:</label>
+          <label for="carne">お肉の種類:</label>
           <select id="carne" v-model="carne" name="carne">
-            <option value="">Selecione a carne</option>
+            <option value="">お肉を選ぶ</option>
             <option v-for="carn in carnes" :key="carn.id" :value="carn.tipo">
               {{ carn.tipo }}
             </option>
@@ -33,7 +33,7 @@
         </div>
         <div id="opcionais-container" class="input-container">
           <label id="opcionais-title" for="opcionais">
-            Selecione os opcionais:
+            オプションメニュー:
           </label>
           <div
             v-for="opcional in opcionaisdata"
@@ -48,9 +48,9 @@
             />
             <span>{{ opcional.tipo }}</span>
           </div>
-          <div class="input-container">
-            <input type="submit" class="submit-btn" value="Criar meu Burger" />
-          </div>
+        </div>
+        <div class="input-container">
+          <input type="submit" class="submit-btn" value="Criar meu Burger" />
         </div>
       </form>
     </div>

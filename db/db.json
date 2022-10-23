@@ -3,114 +3,112 @@
     "paes": [
       {
         "id": 1,
-        "tipo": "Italiano Branco"
+        "tipo": "ホワイト イタリアン"
       },
       {
         "id": 2,
-        "tipo": "3 Queijos"
+        "tipo": "チーズ"
       },
       {
         "id": 3,
-        "tipo": "Parmesão e Orégano"
+        "tipo": "パルメザンとオレガノ"
       },
       {
         "id": 4,
-        "tipo": "Integral"
+        "tipo": "ノーマル"
       }
     ],
     "carnes": [
       {
         "id": 1,
-        "tipo": "Maminha"
+        "tipo": "ミイラ"
       },
       {
         "id": 2,
-        "tipo": "Alcatra"
+        "tipo": "ランプ"
       },
       {
         "id": 3,
-        "tipo": "Picanha"
+        "tipo": "ピカニャ"
       },
       {
         "id": 4,
-        "tipo": "Veggie burger"
+        "tipo": "野菜肉"
       }
     ],
     "opcionais": [
       {
         "id": 1,
-        "tipo": "Bacon"
+        "tipo": "ベーコン"
       },
       {
         "id": 2,
-        "tipo": "Cheddar"
+        "tipo": "チェダー"
       },
       {
         "id": 3,
-        "tipo": "Salame"
+        "tipo": "サラミ"
       },
       {
         "id": 4,
-        "tipo": "Tomate"
+        "tipo": "トマト"
       },
       {
         "id": 4,
-        "tipo": "Cebola roxa"
+        "tipo": "オニオン"
       },
       {
         "id": 4,
-        "tipo": "Pepino"
+        "tipo": "きゅうり"
       }
     ]
   },
   "status": [
     {
       "id": 1,
-      "tipo": "Solicitado"
+      "tipo": "リクエスト済み"
     },
     {
       "id": 2,
-      "tipo": "Em produção"
+      "tipo": "生産中"
     },
     {
       "id": 3,
-      "tipo": "Finalizado"
+      "tipo": "終了"
     }
   ],
   "burgers": [
     {
-      "nome": "Natália",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 30
+      "nome": "ナタリア",
+      "carne": "ピカニャ",
+      "pao": "チーズ",
+      "opcionais": ["ベーコン", "トマト"],
+      "status": "リクエスト済み",
+      "id": 1
     },
     {
-      "nome": "Andreia",
-      "carne": "Veggie burger",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Tomate",
-        "Pepino"
-      ],
-      "status": "Finalizado",
-      "id": 31
+      "nome": "アンドレア",
+      "carne": "野菜肉",
+      "pao": "チーズ",
+      "opcionais": ["トマト", "きゅうり"],
+      "status": "終了",
+      "id": 2
     },
     {
-      "nome": "20221016-2",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Salame",
-        "Cebola roxa"
-      ],
+      "nome": "佐藤",
+      "carne": "ミイラ",
+      "pao": "ホワイトイタリアン",
+      "opcionais": ["ベーコン", "サラミ"],
+      "status": "リクエスト済み",
+      "id": 3
+    },
+    {
+      "nome": "ケンタッキー",
+      "carne": "ミイラ",
+      "pao": "チーズ",
+      "opcionais": ["ベーコン", "サラミ"],
       "status": "Solicitado",
-      "id": 33
+      "id": 4
     }
   ]
 }
